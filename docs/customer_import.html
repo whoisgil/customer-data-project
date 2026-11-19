@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module customer_import</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">customer_import</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/customer_import.py">/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/customer_import.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;menu&nbsp;driven&nbsp;application&nbsp;for&nbsp;importing&nbsp;and&nbsp;managing&nbsp;customer&nbsp;data<br>
+#&nbsp;importing&nbsp;needed&nbsp;libraries</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-createDatabaseConnection"><strong>createDatabaseConnection</strong></a>()</dt><dd><span class="code">Prompts&nbsp;for&nbsp;credentials&nbsp;until&nbsp;a&nbsp;database&nbsp;connection&nbsp;succeeds.</span></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">Runs&nbsp;the&nbsp;menu&nbsp;until&nbsp;the&nbsp;user&nbsp;chooses&nbsp;to&nbsp;quit</span></dd></dl>
+ <dl><dt><a name="-reportImportResults"><strong>reportImportResults</strong></a>(passed_rejected, passed_counts)</dt><dd><span class="code">Prints&nbsp;how&nbsp;many&nbsp;records&nbsp;were&nbsp;read,&nbsp;merged,&nbsp;accepted&nbsp;and&nbsp;rejected</span></dd></dl>
+ <dl><dt><a name="-runImport"><strong>runImport</strong></a>(passed_db)</dt><dd><span class="code">Imports&nbsp;a&nbsp;file,&nbsp;writes&nbsp;export&nbsp;files,&nbsp;and&nbsp;loads&nbsp;both&nbsp;database&nbsp;tables.</span></dd></dl>
+ <dl><dt><a name="-showMenu"><strong>showMenu</strong></a>()</dt><dd><span class="code">Prints&nbsp;the&nbsp;main&nbsp;menu&nbsp;and&nbsp;returns&nbsp;the&nbsp;option&nbsp;the&nbsp;user&nbsp;chose</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>EDITABLE_COLUMNS</strong> = {'Mailings': ['name', 'company', 'address'], 'crm_data': ['f_name', 'l_name', 'company', 'address', 'city', 'state', 'zip', 'primary_phone', 'secondary_phone', 'email_address']}<br>
+<strong>FIELD_VALIDATORS</strong> = {'address': &lt;function validateAddress&gt;, 'city': &lt;function validateCity&gt;, 'company': &lt;function validateCompany&gt;, 'email_address': &lt;function validateEmail&gt;, 'f_name': &lt;function validateName&gt;, 'l_name': &lt;function validateName&gt;, 'name': &lt;function validateName&gt;, 'primary_phone': &lt;function validatePhone&gt;, 'secondary_phone': &lt;function validatePhone&gt;, 'zip': &lt;function validateZip&gt;}<br>
+<strong>LOCATION_CSV_PATH</strong> = PosixPath('/Users/gilnk/Desktop/IT_412/it412_who...r_data_project/text_files/customer_location.csv')<br>
+<strong>OPTIONAL_FIELDS</strong> = {'company', 'email_address', 'secondary_phone'}<br>
+<strong>PHONE_JSON_PATH</strong> = PosixPath('/Users/gilnk/Desktop/IT_412/it412_who...mer_data_project/text_files/customer_phone.json')<br>
+<strong>PRIMARY_KEY_COLUMNS</strong> = {'Mailings': 'mail_id', 'crm_data': 'crm_id'}<br>
+<strong>PROJECT_DIRECTORY</strong> = PosixPath('/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project')<br>
+<strong>TEXT_FILE_DIRECTORY</strong> = PosixPath('/Users/gilnk/Desktop/IT_412/it412_who.../week_8_and_10_customer_data_project/text_files')<br>
+<strong>VALID_TABLES</strong> = ('crm_data', 'Mailings')<br>
+<strong>show_debug_information</strong> = False</td></tr></table>
+</body></html>

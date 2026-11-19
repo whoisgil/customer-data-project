@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module functions.customer_functions</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="functions.html" class="white">functions</a>.customer_functions</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/customer_functions.py">/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/customer_functions.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;Functions&nbsp;for&nbsp;clearing&nbsp;and&nbsp;loading&nbsp;customer&nbsp;records&nbsp;into&nbsp;the&nbsp;database</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-addCustomerRecord"><strong>addCustomerRecord</strong></a>(passed_db)</dt><dd><span class="code">Runs&nbsp;the&nbsp;add-customer&nbsp;workflow.</span></dd></dl>
+ <dl><dt><a name="-chooseTable"><strong>chooseTable</strong></a>()</dt><dd><span class="code">Asks&nbsp;the&nbsp;user&nbsp;which&nbsp;database&nbsp;table&nbsp;to&nbsp;work&nbsp;with.</span></dd></dl>
+ <dl><dt><a name="-clearDatabaseTables"><strong>clearDatabaseTables</strong></a>(passed_db)</dt><dd><span class="code">Deletes&nbsp;every&nbsp;row&nbsp;from&nbsp;crm_data&nbsp;and&nbsp;Mailings.</span></dd></dl>
+ <dl><dt><a name="-deleteCustomerRecord"><strong>deleteCustomerRecord</strong></a>(passed_db, passed_table)</dt><dd><span class="code">Runs&nbsp;the&nbsp;delete-record&nbsp;workflow&nbsp;for&nbsp;the&nbsp;chosen&nbsp;table</span></dd></dl>
+ <dl><dt><a name="-deleteRecordById"><strong>deleteRecordById</strong></a>(passed_db, passed_table, passed_record_id)</dt><dd><span class="code">Deletes&nbsp;one&nbsp;record&nbsp;by&nbsp;ID&nbsp;and&nbsp;reports&nbsp;whether&nbsp;it&nbsp;succeeded</span></dd></dl>
+ <dl><dt><a name="-editCustomerRecord"><strong>editCustomerRecord</strong></a>(passed_db, passed_table)</dt><dd><span class="code">Runs&nbsp;the&nbsp;edit-record&nbsp;workflow&nbsp;for&nbsp;the&nbsp;chosen&nbsp;table</span></dd></dl>
+ <dl><dt><a name="-fetchRecordById"><strong>fetchRecordById</strong></a>(passed_db, passed_table, passed_record_id)</dt><dd><span class="code">Returns&nbsp;the&nbsp;record&nbsp;with&nbsp;the&nbsp;given&nbsp;ID&nbsp;from&nbsp;the&nbsp;chosen&nbsp;table,&nbsp;or&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-insertRecordBothTables"><strong>insertRecordBothTables</strong></a>(passed_db, passed_record)</dt><dd><span class="code">Inserts&nbsp;one&nbsp;customer&nbsp;into&nbsp;both&nbsp;tables&nbsp;as&nbsp;one&nbsp;transaction.</span></dd></dl>
+ <dl><dt><a name="-loadDatabaseTables"><strong>loadDatabaseTables</strong></a>(passed_db, passed_records)</dt><dd><span class="code">Clears&nbsp;both&nbsp;tables&nbsp;and&nbsp;loads&nbsp;the&nbsp;accepted&nbsp;records&nbsp;as&nbsp;one&nbsp;transaction.</span></dd></dl>
+ <dl><dt><a name="-promptFieldName"><strong>promptFieldName</strong></a>(passed_table)</dt><dd><span class="code">Asks&nbsp;which&nbsp;field&nbsp;to&nbsp;edit&nbsp;and&nbsp;returns&nbsp;the&nbsp;matching&nbsp;column&nbsp;name</span></dd></dl>
+ <dl><dt><a name="-promptFieldValue"><strong>promptFieldValue</strong></a>(passed_field_name)</dt><dd><span class="code">Prompts&nbsp;for&nbsp;a&nbsp;new&nbsp;value&nbsp;for&nbsp;the&nbsp;chosen&nbsp;field,&nbsp;validating&nbsp;it&nbsp;appropriately</span></dd></dl>
+ <dl><dt><a name="-promptForRecord"><strong>promptForRecord</strong></a>()</dt><dd><span class="code">Prompts&nbsp;for&nbsp;all&nbsp;customer&nbsp;fields.</span></dd></dl>
+ <dl><dt><a name="-promptRecordId"><strong>promptRecordId</strong></a>(passed_table)</dt><dd><span class="code">Prompts&nbsp;for&nbsp;the&nbsp;primary&nbsp;key&nbsp;value&nbsp;of&nbsp;the&nbsp;record&nbsp;to&nbsp;edit&nbsp;or&nbsp;delete</span></dd></dl>
+ <dl><dt><a name="-promptValidField"><strong>promptValidField</strong></a>(
+    passed_prompt,
+    passed_validator,
+    passed_max_length=50,
+    passed_allow_blank=False
+)</dt><dd><span class="code">Prompts&nbsp;until&nbsp;a&nbsp;field&nbsp;passes&nbsp;validation.</span></dd></dl>
+ <dl><dt><a name="-showTableRecords"><strong>showTableRecords</strong></a>(passed_db, passed_table_name)</dt><dd><span class="code">Displays&nbsp;every&nbsp;record&nbsp;in&nbsp;the&nbsp;chosen&nbsp;database&nbsp;table.</span></dd></dl>
+ <dl><dt><a name="-updateRecordField"><strong>updateRecordField</strong></a>(
+    passed_db,
+    passed_table,
+    passed_record_id,
+    passed_field_name,
+    passed_new_value
+)</dt><dd><span class="code">Updates&nbsp;one&nbsp;field&nbsp;on&nbsp;one&nbsp;record&nbsp;and&nbsp;reports&nbsp;whether&nbsp;it&nbsp;succeeded</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>EDITABLE_COLUMNS</strong> = {'Mailings': ['name', 'company', 'address'], 'crm_data': ['f_name', 'l_name', 'company', 'address', 'city', 'state', 'zip', 'primary_phone', 'secondary_phone', 'email_address']}<br>
+<strong>FIELD_VALIDATORS</strong> = {'address': &lt;function validateAddress&gt;, 'city': &lt;function validateCity&gt;, 'company': &lt;function validateCompany&gt;, 'email_address': &lt;function validateEmail&gt;, 'f_name': &lt;function validateName&gt;, 'l_name': &lt;function validateName&gt;, 'name': &lt;function validateName&gt;, 'primary_phone': &lt;function validatePhone&gt;, 'secondary_phone': &lt;function validatePhone&gt;, 'zip': &lt;function validateZip&gt;}<br>
+<strong>OPTIONAL_FIELDS</strong> = {'company', 'email_address', 'secondary_phone'}<br>
+<strong>PRIMARY_KEY_COLUMNS</strong> = {'Mailings': 'mail_id', 'crm_data': 'crm_id'}<br>
+<strong>VALID_TABLES</strong> = ('crm_data', 'Mailings')<br>
+<strong>show_debug_information</strong> = False</td></tr></table>
+</body></html>

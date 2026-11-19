@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module functions.export_functions</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="functions.html" class="white">functions</a>.export_functions</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/export_functions.py">/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/export_functions.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;functions&nbsp;for&nbsp;exporting&nbsp;customer&nbsp;records&nbsp;to&nbsp;JSON&nbsp;and&nbsp;CSV&nbsp;output&nbsp;files</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="csv.html">csv</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="shutil.html">shutil</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-backupExistingFile"><strong>backupExistingFile</strong></a>(passed_file_path)</dt><dd><span class="code">Copies&nbsp;an&nbsp;existing&nbsp;output&nbsp;file&nbsp;to&nbsp;a&nbsp;.copie&nbsp;file&nbsp;before&nbsp;it&nbsp;gets&nbsp;overwritten</span></dd></dl>
+ <dl><dt><a name="-writeExportFiles"><strong>writeExportFiles</strong></a>(passed_records, passed_phone_path, passed_location_path)</dt><dd><span class="code">Writes&nbsp;both&nbsp;output&nbsp;files&nbsp;for&nbsp;the&nbsp;accepted&nbsp;records&nbsp;and&nbsp;reports&nbsp;whether&nbsp;each&nbsp;succeeded</span></dd></dl>
+ <dl><dt><a name="-writeLocationCsv"><strong>writeLocationCsv</strong></a>(passed_records, passed_file_path)</dt><dd><span class="code">Writes&nbsp;first&nbsp;name,&nbsp;last&nbsp;name,&nbsp;county&nbsp;and&nbsp;state&nbsp;to&nbsp;a&nbsp;CSV&nbsp;file.</span></dd></dl>
+ <dl><dt><a name="-writePhoneJson"><strong>writePhoneJson</strong></a>(passed_records, passed_file_path)</dt><dd><span class="code">Writes&nbsp;first&nbsp;name&nbsp;and&nbsp;phone&nbsp;numbers&nbsp;for&nbsp;every&nbsp;accepted&nbsp;record&nbsp;to&nbsp;a&nbsp;JSON&nbsp;file.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>show_debug_information</strong> = False</td></tr></table>
+</body></html>

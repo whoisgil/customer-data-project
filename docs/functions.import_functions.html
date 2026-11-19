@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module functions.import_functions</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="functions.html" class="white">functions</a>.import_functions</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/import_functions.py">/Users/gilnk/Desktop/IT_412/it412_whoisgil/week_8_and_10_customer_data_project/functions/import_functions.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;functions&nbsp;for&nbsp;importing&nbsp;and&nbsp;cleaning&nbsp;the&nbsp;customer&nbsp;data&nbsp;file</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-buildRecordList"><strong>buildRecordList</strong></a>(passed_lines)</dt><dd><span class="code">Builds&nbsp;cleaned&nbsp;customer&nbsp;records&nbsp;and&nbsp;tracks&nbsp;malformed&nbsp;lines</span></dd></dl>
+ <dl><dt><a name="-cleanRecord"><strong>cleanRecord</strong></a>(passed_record)</dt><dd><span class="code">Repairs&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;record&nbsp;where&nbsp;the&nbsp;correction&nbsp;has&nbsp;one&nbsp;clear&nbsp;answer</span></dd></dl>
+ <dl><dt><a name="-findMatchingKey"><strong>findMatchingKey</strong></a>(passed_record, passed_unique_records)</dt><dd><span class="code">Returns&nbsp;the&nbsp;key&nbsp;of&nbsp;a&nbsp;record&nbsp;matching&nbsp;by&nbsp;email&nbsp;or&nbsp;phone.</span></dd></dl>
+ <dl><dt><a name="-importDataFile"><strong>importDataFile</strong></a>(passed_file_path)</dt><dd><span class="code">Imports&nbsp;customer&nbsp;data&nbsp;and&nbsp;returns&nbsp;records&nbsp;and&nbsp;import&nbsp;counts.</span></dd></dl>
+ <dl><dt><a name="-mergeRecords"><strong>mergeRecords</strong></a>(passed_existing, passed_duplicate)</dt><dd><span class="code">Combines&nbsp;two&nbsp;records&nbsp;for&nbsp;the&nbsp;same&nbsp;person&nbsp;into&nbsp;one</span></dd></dl>
+ <dl><dt><a name="-parseLine"><strong>parseLine</strong></a>(passed_line)</dt><dd><span class="code">Splits&nbsp;one&nbsp;line&nbsp;of&nbsp;the&nbsp;data&nbsp;file&nbsp;into&nbsp;a&nbsp;customer&nbsp;record,&nbsp;or&nbsp;returns&nbsp;an&nbsp;empty&nbsp;dictionary</span></dd></dl>
+ <dl><dt><a name="-readDataFile"><strong>readDataFile</strong></a>(passed_file_path)</dt><dd><span class="code">Reads&nbsp;the&nbsp;data&nbsp;file&nbsp;and&nbsp;returns&nbsp;its&nbsp;lines,&nbsp;or&nbsp;an&nbsp;empty&nbsp;list&nbsp;if&nbsp;it&nbsp;cannot&nbsp;be&nbsp;read</span></dd></dl>
+ <dl><dt><a name="-removeDuplicates"><strong>removeDuplicates</strong></a>(passed_records)</dt><dd><span class="code">Merges&nbsp;records&nbsp;that&nbsp;describe&nbsp;the&nbsp;same&nbsp;customer.</span></dd></dl>
+ <dl><dt><a name="-validateRecordList"><strong>validateRecordList</strong></a>(passed_records)</dt><dd><span class="code">Splits&nbsp;a&nbsp;list&nbsp;of&nbsp;records&nbsp;into&nbsp;the&nbsp;ones&nbsp;that&nbsp;passed&nbsp;validation&nbsp;and&nbsp;the&nbsp;ones&nbsp;that&nbsp;failed</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>show_debug_information</strong> = False</td></tr></table>
+</body></html>
