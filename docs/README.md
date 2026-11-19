@@ -53,7 +53,7 @@ Editing and deleting records remain for the final submission.
   For testing, the default project user is:
 
   - Username: `it412_user`
-  - Password: `12345Password`
+  - Password: `enter your password`
 
   These credentials are intended only for the project’s local testing
   environment.
